@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+
+class Vector2; //further decalration
+
 class Vector3
 {
 private: //attributes 
@@ -20,6 +23,9 @@ public: //functions
 
 	// copy connstructor
 	Vector3(Vector3 const&);
+
+	// constructor with vector2
+	Vector3(Vector2 const&);
 
 	//OTHER
 
@@ -54,4 +60,6 @@ public: //functions
 	//vector product of 2 vectors
 	friend Vector3 operator^ (Vector3 const& v1, Vector3 const& v2);
 };
+
+#include "Vector2.h"
 
