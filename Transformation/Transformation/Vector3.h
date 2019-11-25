@@ -21,30 +21,6 @@ public: //functions
 	// copy connstructor
 	Vector3(Vector3 const&);
 
-	/*
-	//OPERATOR
-	//sum of 2 vectors 
-	static Vector3 operator+(Vector3 v1, Vector3 v2);
-
-	//diference of 2 vectors 
-	static Vector3 operator-(Vector3 v1, Vector3 c2);
-
-	//negative of vectors 
-	static Vector3 operator-(Vector3 v1);
-
-	//scalar product of 2 vectors 
-	static Vector3 operator*(Vector3 v1, Vector3 v2);
-
-	//product of a scalar by a vector
-	static Vector3 operator*(double k, Vector3 v1);
-
-	//Product of a scalat by a vector 
-	static Vector3 operator*(int k, Vector3 v1);
-
-	//vector product of 2 vectors
-	static Vector3 operator^ (Vector3 v1, Vector3 v2);
-	*/
-
 	//OTHER
 
 	double length() const;
@@ -55,5 +31,27 @@ public: //functions
 	void Normalise();
 
 	std::string toString();
+
+	//OPERATOR
+	//sum of 2 vectors
+	friend Vector3 operator+(Vector3 const & v1, Vector3 const& v2);
+
+	//diference of 2 vectors
+	friend Vector3 operator-(Vector3 const& v1, Vector3 const& c2);
+
+	//negative of vectors
+	friend Vector3 operator-(Vector3 const& v1);
+
+	//scalar product of 2 vectors
+	friend Vector3 operator*(Vector3 const& v1, Vector3 const& v2);
+
+	//product of a scalar by a vector
+	friend Vector3 operator*(double k, Vector3 const& v1);
+
+	//Product of a scalat by a vector
+	friend Vector3 operator*(int k, Vector3 const& v1);
+
+	//vector product of 2 vectors
+	friend Vector3 operator^ (Vector3 const& v1, Vector3 const& v2);
 };
 
