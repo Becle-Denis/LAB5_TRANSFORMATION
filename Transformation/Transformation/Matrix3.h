@@ -42,29 +42,6 @@ public:
 	/// </summary>
 	Matrix3(double a11, double a12, double a13, double a21, double a22, double a23, double a31, double a32, double a33);
 
-	/* Static operator issue 
-	//OPERATOR 
-	//Product of a matrix by a vector 
-	static Vector3 operator* (Matrix3 m1, Vector3 v1);
-
-	//Product of a vector by a matrix
-	static Vector3 operator*  (Vector3 v1, Matrix3 m1);
-
-	//sum 2 matrix
-	static Matrix3 operator+ (Matrix3 m1, Matrix3 m2);
-
-	//difference of 2 matrix
-	static Matrix3 operator- (Matrix3 m1, Matrix3 m2);
-
-	//product of a matrix by a scalar
-	static Matrix3 operator* (double x, Matrix3 m1);
-
-	//Product of 2 matrix
-	static Matrix3 operator* (Matrix3 m1, Matrix3 m2);
-
-	static Matrix3 operator- (Matrix3 m1);
-	*/
-
 	//OTHER 
 	//Transpose the given Matrix and return it
 	static Matrix3 transpose(Matrix3 m1);
@@ -94,5 +71,29 @@ public:
 	static Matrix3 rotationZ(int angleDEG);
 
 	static Matrix3 scale3D(int dx);
+
+	//OPERATOR
+	//Product of a matrix by a vector
+	friend Vector3 operator* (Matrix3 const & m1, Vector3 const & v1);
+
+	//Product of a vector by a matrix
+	friend Vector3 operator*  (Vector3 const & v1, Matrix3 const & m1);
+
+	//sum 2 matrix
+	friend Matrix3 operator+ (Matrix3 const & m1, Matrix3 const & m2);
+
+	//difference of 2 matrix
+	friend Matrix3 operator- (Matrix3 const & m1, Matrix3 const & m2);
+
+	//product of a matrix by a scalar
+	friend Matrix3 operator* (double x, Matrix3 const & m1);
+
+	//Product of 2 matrix
+	friend Matrix3 operator* (Matrix3 const & m1, Matrix3 const & m2);
+
+	friend Matrix3 operator- (Matrix3 const & m1);
 };
+
+
+
 #include "Vector3.h"
