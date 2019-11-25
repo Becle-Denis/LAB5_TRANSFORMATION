@@ -7,5 +7,6 @@
 int main()
 {
 	std::cout << "hey" << std::endl;
+	Matrix3 test;
 	return 0;
 }
