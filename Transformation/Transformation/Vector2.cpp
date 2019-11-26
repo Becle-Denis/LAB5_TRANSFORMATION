@@ -19,3 +19,18 @@ Vector2::Vector2(Vector3 const& ext) :
 {
 
 }
+
+float Vector2::length() const
+{
+	return (float) sqrt(lenghtSquared());
+}
+
+float Vector2::lenghtSquared() const
+{
+	return x * x + y * y ;
+}
+
+std::string Vector2::toString()
+{
+	return "Vector2 x: " + std::to_string(x) + " y: " + std::to_string(y);
+}
