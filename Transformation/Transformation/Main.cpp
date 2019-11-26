@@ -29,5 +29,28 @@ int main()
 	std::cout << testV3.toString() << std::endl;
 	std::cout << "Lenght : " << std::to_string(testV3.length()) << std::endl << std::endl;
 
+	Vector2 op1;
+	Vector2 op2;
+	Vector2 op3;
+
+	std::cout << "OPEARATIONS" << std::endl;
+	
+	//  + 
+	op1 = Vector2(5, 3);
+	op2 = Vector2(-4, 12); 
+	std::cout << "A = " << op1.toString() << std::endl;
+	std::cout << "B = " << op2.toString() << std::endl;
+	op3 = op1 + op2;
+	std::cout << "A + B = " << op3.toString() << std::endl << std::endl;
+
+	// - 
+	op1 = Vector2(5, 3);
+	op2 = Vector2(-4, 12);
+	std::cout << "A = " << op1.toString() << std::endl;
+	std::cout << "B = " << op2.toString() << std::endl;
+	op3 = op1 - op2;
+	std::cout << "A - B = " << op3.toString() << std::endl << std::endl;
+
+
 	return 0;
 }
