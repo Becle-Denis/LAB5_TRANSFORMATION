@@ -51,6 +51,12 @@ int main()
 	op3 = op1 - op2;
 	std::cout << "A - B = " << op3.toString() << std::endl << std::endl;
 
+	// -X
+	op1 = Vector2(5, 3);
+	std::cout << "A = " << op1.toString() << std::endl;
+	op3 = -op1;
+	std::cout << "- A = " << op3.toString() << std::endl << std::endl;
+
 
 	return 0;
 }

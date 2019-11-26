@@ -54,3 +54,8 @@ Vector2 operator-(Vector2 const& v1, Vector2 const& v2)
 {
 	return Vector2(v1.x - v2.x, v1.y - v2.y);
 }
+
+Vector2 operator-(Vector2 const& v1)
+{
+	return Vector2() - v1;
+}
