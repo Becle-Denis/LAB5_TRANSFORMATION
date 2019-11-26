@@ -17,3 +17,18 @@ Vector3::Vector3(Vector2 const& ext) :
 {
 
 }
+
+float Vector3::length() const
+{
+	return (float) sqrt(lenghtSquared());
+}
+
+float Vector3::lenghtSquared() const
+{
+	return x + x * y + y * z + z ;
+}
+
+std::string Vector3::toString()
+{
+	return "Vector3 x: " + std::to_string(x) + " y: " + std::to_string(y) + " z: " + std::to_string(z);
+}
