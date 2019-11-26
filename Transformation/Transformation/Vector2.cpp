@@ -30,6 +30,16 @@ float Vector2::lenghtSquared() const
 	return x * x + y * y ;
 }
 
+void Vector2::normalise()
+{
+	float len = length();
+	if (len != 0)
+	{
+		x = x / len;
+		y = y / len;
+	}
+}
+
 std::string Vector2::toString()
 {
 	return "Vector2 x: " + std::to_string(x) + " y: " + std::to_string(y);

@@ -31,7 +31,7 @@ public: //functions
 	float lenghtSquared() const;
 
 	//Reduce the length to 1
-	void Normalise();
+	void normalise();
 
 	std::string toString();
 
