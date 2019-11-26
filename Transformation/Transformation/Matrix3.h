@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 class Vector3;  //further declaration
 
@@ -9,14 +10,17 @@ class Matrix3
 {
 public: 
 	//ATTRIBUTES 
+	//Row 1 
 	float a11{ 0.0 };
 	float a12{ 0.0 };
 	float a13{ 0.0 };
 
+	//Row 2 
 	float a21{ 0.0 };
 	float a22{ 0.0 };
 	float a23{ 0.0 };
 
+	//Row 3 
 	float a31{ 0.0 };
 	float a32{ 0.0 };
 	float a33{ 0.0 };
@@ -43,6 +47,8 @@ public:
 	Matrix3(float a11, float a12, float a13, float a21, float a22, float a23, float a31, float a32, float a33);
 
 	//OTHER 
+	std::string toString();
+
 	//Transpose the given Matrix and return it
 	static Matrix3 transpose(Matrix3 m1);
 
