@@ -5,7 +5,7 @@ class Vector3; // further decalaration
 
 class Vector2
 {
-private: //Attributes 
+public: //Attributes 
 
 	float x{ 0.0 };
 	float y{ 0.0 };
