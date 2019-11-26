@@ -17,12 +17,17 @@ int main()
 	std::cout << "Squared Lenght : " << std::to_string(testV2.lenghtSquared()) << std::endl;
 	testV2.normalise();
 	std::cout << "Normalized" << std::endl;
-	std::cout << testV2.toString() << std::endl << std::endl;
+	std::cout << testV2.toString()  << std::endl;
+	std::cout << "Lenght : " << std::to_string(testV2.length()) << std::endl << std::endl;
 
 
 	std::cout << testV3.toString() << std::endl;
 	std::cout << "Lenght : " << std::to_string(testV3.length()) << std::endl;
 	std::cout << "Squared Lenght : " << std::to_string(testV3.lenghtSquared()) << std::endl;
+	testV3.normalise();
+	std::cout << "Normalized" << std::endl;
+	std::cout << testV3.toString() << std::endl;
+	std::cout << "Lenght : " << std::to_string(testV3.length()) << std::endl << std::endl;
 
 	return 0;
 }

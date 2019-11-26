@@ -25,7 +25,18 @@ float Vector3::length() const
 
 float Vector3::lenghtSquared() const
 {
-	return x + x * y + y * z + z ;
+	return x * x + y * y + z * z ;
+}
+
+void Vector3::normalise()
+{
+	float len = length();
+	if (len != 0)
+	{
+		x = x / len;
+		y = y / len;
+		z = z / len;
+	}
 }
 
 std::string Vector3::toString()
