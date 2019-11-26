@@ -2,7 +2,7 @@
 
 
 //----------------CONSTRUCTORS-------------------
-Vector2::Vector2(double x1, double y1) :
+Vector2::Vector2(float x1, float y1) :
 	x(x1),y(y1)
 {
 

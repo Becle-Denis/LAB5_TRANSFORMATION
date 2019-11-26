@@ -7,8 +7,8 @@ class Vector2
 {
 private: //Attributes 
 
-	double x{ 0.0 };
-	double y{ 0.0 };
+	float x{ 0.0 };
+	float y{ 0.0 };
 
 public: //functions 
 
@@ -17,7 +17,7 @@ public: //functions
 	Vector2() = default;
 
 	// constructor with 3 values 
-	Vector2(double x1, double y1);
+	Vector2(float x1, float y1);
 
 	// copy connstructor
 	Vector2(Vector2 const&);
@@ -26,9 +26,9 @@ public: //functions
 	Vector2(Vector3 const&);
 
 	//OTHER
-	double length() const;
+	float length() const;
 
-	double lenghtSquared() const;
+	float lenghtSquared() const;
 
 	//Reduce the length to 1
 	void Normalise();
@@ -49,7 +49,7 @@ public: //functions
 	friend Vector2 operator*(Vector2 const& v1, Vector2 const& v2);
 
 	//product of a scalar by a vector
-	friend Vector2 operator*(double k, Vector2 const& v1);
+	friend Vector2 operator*(float k, Vector2 const& v1);
 
 	//Product of a scalat by a vector
 	friend Vector2 operator*(int k, Vector2 const& v1);

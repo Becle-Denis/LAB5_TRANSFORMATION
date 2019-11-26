@@ -9,17 +9,17 @@ class Matrix3
 {
 public: 
 	//ATTRIBUTES 
-	double a11{ 0.0 };
-	double a12{ 0.0 };
-	double a13{ 0.0 };
+	float a11{ 0.0 };
+	float a12{ 0.0 };
+	float a13{ 0.0 };
 
-	double a21{ 0.0 };
-	double a22{ 0.0 };
-	double a23{ 0.0 };
+	float a21{ 0.0 };
+	float a22{ 0.0 };
+	float a23{ 0.0 };
 
-	double a31{ 0.0 };
-	double a32{ 0.0 };
-	double a33{ 0.0 };
+	float a31{ 0.0 };
+	float a32{ 0.0 };
+	float a33{ 0.0 };
 
 	//FUNCTIONS
 	
@@ -40,14 +40,14 @@ public:
 	/// <summary>
 	/// Constructor with 9 values 
 	/// </summary>
-	Matrix3(double a11, double a12, double a13, double a21, double a22, double a23, double a31, double a32, double a33);
+	Matrix3(float a11, float a12, float a13, float a21, float a22, float a23, float a31, float a32, float a33);
 
 	//OTHER 
 	//Transpose the given Matrix and return it
 	static Matrix3 transpose(Matrix3 m1);
 
 	//return the determinat of the given matrix 
-	static double determinant(Matrix3 m1);
+	static float determinant(Matrix3 m1);
 
 	//return the selected row as a vector3 
 	Vector3 row(int i);
@@ -86,7 +86,7 @@ public:
 	friend Matrix3 operator- (Matrix3 const & m1, Matrix3 const & m2);
 
 	//product of a matrix by a scalar
-	friend Matrix3 operator* (double x, Matrix3 const & m1);
+	friend Matrix3 operator* (float x, Matrix3 const & m1);
 
 	//Product of 2 matrix
 	friend Matrix3 operator* (Matrix3 const & m1, Matrix3 const & m2);
