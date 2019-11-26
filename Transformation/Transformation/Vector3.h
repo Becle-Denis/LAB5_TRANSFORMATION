@@ -5,7 +5,7 @@ class Vector2; //further decalration
 
 class Vector3
 {
-private: //attributes 
+public: //attributes 
 
 	double x{ 0.0 };
 	double y{ 0.0 };
