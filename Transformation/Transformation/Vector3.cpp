@@ -56,7 +56,7 @@ Vector3 operator-(Vector3 const& v1, Vector3 const& v2)
 
 Vector3 operator-(Vector3 const& v1)
 {
-	return Vector3();
+	return Vector3() - v1;
 }
 
 Vector3 operator*(Vector3 const& v1, Vector3 const& v2)
