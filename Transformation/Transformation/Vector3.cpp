@@ -43,3 +43,38 @@ std::string Vector3::toString()
 {
 	return "Vector3 x: " + std::to_string(x) + " y: " + std::to_string(y) + " z: " + std::to_string(z);
 }
+
+Vector3 operator+(Vector3 const& v1, Vector3 const& v2)
+{
+	return Vector3();
+}
+
+Vector3 operator-(Vector3 const& v1, Vector3 const& c2)
+{
+	return Vector3();
+}
+
+Vector3 operator-(Vector3 const& v1)
+{
+	return Vector3();
+}
+
+Vector3 operator*(Vector3 const& v1, Vector3 const& v2)
+{
+	return Vector3();
+}
+
+Vector3 operator*(float k, Vector3 const& v1)
+{
+	return Vector3();
+}
+
+Vector3 operator*(int k, Vector3 const& v1)
+{
+	return Vector3();
+}
+
+Vector3 operator^(Vector3 const& v1, Vector3 const& v2)
+{
+	return Vector3();
+}

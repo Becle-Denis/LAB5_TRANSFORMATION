@@ -33,8 +33,13 @@ int main()
 	Vector2 op2;
 	Vector2 op3;
 
+	Vector3 opB1;
+	Vector3 opB2;
+	Vector3 opB3;
+
 	std::cout << "OPEARATIONS" << std::endl;
 	
+	//VECTOR 2 
 	//  + 
 	op1 = Vector2(5, 3);
 	op2 = Vector2(-4, 12); 
@@ -71,6 +76,44 @@ int main()
 	std::cout << "A = " << op1.toString() << std::endl;
 	op3 = 3 * op1;
 	std::cout << "3 * A = " << op3.toString() << std::endl << std::endl;
+
+	//VECTOR 3
+	//  + 
+	opB1 = Vector3(5, 3, 12);
+	opB2 = Vector3(-4, 12, 9);
+	std::cout << "A = " << opB1.toString() << std::endl;
+	std::cout << "B = " << opB2.toString() << std::endl;
+	opB3 = opB1 + opB2;
+	std::cout << "A + B = " << opB3.toString() << std::endl << std::endl;
+
+	// - 
+	opB1 = Vector3(5, 3, 12);
+	opB2 = Vector3(-4, 12, 9);
+	std::cout << "A = " << opB1.toString() << std::endl;
+	std::cout << "B = " << opB2.toString() << std::endl;
+	opB3 = opB1 - opB2;
+	std::cout << "A - B = " << opB3.toString() << std::endl << std::endl;
+
+	// -X
+	opB1 = Vector3(5, 3, 12);
+	std::cout << "A = " << opB1.toString() << std::endl;
+	opB3 = -opB1;
+	std::cout << "- A = " << opB3.toString() << std::endl << std::endl;
+
+	// * 
+	opB1 = Vector3(5, 3, 12);
+	opB2 = Vector3(-4, 12, 9);
+	std::cout << "A = " << opB1.toString() << std::endl;
+	std::cout << "B = " << opB2.toString() << std::endl;
+	opB3 = opB1 * opB2;
+	std::cout << "A * B = " << opB3.toString() << std::endl << std::endl;
+
+	// * x
+	opB1 = Vector3(5, 3, 12);
+	opB2 = Vector3(-4, 12, 9);
+	std::cout << "A = " << opB1.toString() << std::endl;
+	opB3 = 3 * opB1;
+	std::cout << "3 * A = " << opB3.toString() << std::endl << std::endl;
 
 
 
