@@ -74,3 +74,4 @@ Vector2 operator*(int k, Vector2 const& v1)
 {
 	return Vector2(v1.x * k, v1.y * k);
 }
+

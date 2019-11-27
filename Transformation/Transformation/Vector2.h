@@ -53,9 +53,6 @@ public: //functions
 
 	//Product of a scalat by a vector
 	friend Vector2 operator*(int k, Vector2 const& v1);
-
-	//vector product of 2 vectors
-	friend Vector2 operator^ (Vector2 const& v1, Vector2 const& v2);
 };
 
 #include "Vector3.h"

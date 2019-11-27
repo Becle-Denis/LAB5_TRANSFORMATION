@@ -72,5 +72,7 @@ int main()
 	op3 = 3 * op1;
 	std::cout << "3 * A = " << op3.toString() << std::endl << std::endl;
 
+
+
 	return 0;
 }
