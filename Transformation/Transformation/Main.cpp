@@ -57,6 +57,20 @@ int main()
 	op3 = -op1;
 	std::cout << "- A = " << op3.toString() << std::endl << std::endl;
 
+	// * 
+	op1 = Vector2(5, 3);
+	op2 = Vector2(-4, 12);
+	std::cout << "A = " << op1.toString() << std::endl;
+	std::cout << "B = " << op2.toString() << std::endl;
+	op3 = op1 * op2;
+	std::cout << "A * B = " << op3.toString() << std::endl << std::endl;
+
+	// * x
+	op1 = Vector2(5, 3);
+	op2 = Vector2(-4, 12);
+	std::cout << "A = " << op1.toString() << std::endl;
+	op3 = 3 * op1;
+	std::cout << "3 * A = " << op3.toString() << std::endl << std::endl;
 
 	return 0;
 }
