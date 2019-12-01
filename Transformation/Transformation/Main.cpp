@@ -7,7 +7,6 @@
 
 int main()
 {
-	std::cout << "hey" << std::endl;
 	Matrix3 testM3;
 	Vector2 testV2(3,4);
 	Vector3 testV3(3,4,5);
@@ -110,11 +109,17 @@ int main()
 
 	// * x
 	opB1 = Vector3(5, 3, 12);
-	opB2 = Vector3(-4, 12, 9);
 	std::cout << "A = " << opB1.toString() << std::endl;
 	opB3 = 3 * opB1;
 	std::cout << "3 * A = " << opB3.toString() << std::endl << std::endl;
 
+	// ^ 
+	opB1 = Vector3(5, 3, 12);
+	opB2 = Vector3(-4, 12, 9);
+	std::cout << "A = " << opB1.toString() << std::endl;
+	std::cout << "B = " << opB2.toString() << std::endl;
+	opB3 = opB1 ^ opB2;
+	std::cout << "A ^ B = " << opB3.toString() << std::endl << std::endl;
 
 
 	return 0;
