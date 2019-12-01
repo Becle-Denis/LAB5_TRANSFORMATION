@@ -15,3 +15,10 @@ Matrix3::Matrix3(float a11, float a12, float a13, float a21, float a22, float a2
 {
 
 }
+
+std::string Matrix3::toString()
+{
+	return "Matrix 3 : \n\tRow 1 : " + std::to_string(a11) + "\t, 2 : " + std::to_string(a12) + "\t, 3 : " + std::to_string(a13) + "\n"
+		+ "\tRow 2 : " + std::to_string(a21) + "\t, 2 : " + std::to_string(a22) + "\t, 3 : " + std::to_string(a23) + "\n"
+		+ "\tRow 3 : " + std::to_string(a31) + "\t, 2 : " + std::to_string(a32) + "\t, 3 : " + std::to_string(a33) + "\n";
+}

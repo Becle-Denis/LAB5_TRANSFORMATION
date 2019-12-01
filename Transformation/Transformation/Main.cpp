@@ -7,10 +7,9 @@
 
 int main()
 {
-	Matrix3 testM3;
 	Vector2 testV2(3,4);
 	Vector3 testV3(3,4,5);
-	
+	std::cout << "----------------VECTOR 2 -----------------------" << std::endl;
 	std::cout << testV2.toString() << std::endl;
 	std::cout << "Lenght : " << std::to_string(testV2.length()) << std::endl;
 	std::cout << "Squared Lenght : " << std::to_string(testV2.lenghtSquared()) << std::endl;
@@ -19,7 +18,7 @@ int main()
 	std::cout << testV2.toString()  << std::endl;
 	std::cout << "Lenght : " << std::to_string(testV2.length()) << std::endl << std::endl;
 
-
+	std::cout << "----------------VECTOR 3-----------------------" << std::endl;
 	std::cout << testV3.toString() << std::endl;
 	std::cout << "Lenght : " << std::to_string(testV3.length()) << std::endl;
 	std::cout << "Squared Lenght : " << std::to_string(testV3.lenghtSquared()) << std::endl;
@@ -36,7 +35,7 @@ int main()
 	Vector3 opB2;
 	Vector3 opB3;
 
-	std::cout << "OPEARATIONS" << std::endl;
+	std::cout << "----------------VECTOR 2 OPERATIONS-----------------------" << std::endl;
 	
 	//VECTOR 2 
 	//  + 
@@ -76,6 +75,7 @@ int main()
 	op3 = 3 * op1;
 	std::cout << "3 * A = " << op3.toString() << std::endl << std::endl;
 
+	std::cout << "----------------VECTOR 3 OPERATIONS-----------------------" << std::endl;
 	//VECTOR 3
 	//  + 
 	opB1 = Vector3(5, 3, 12);
@@ -121,6 +121,10 @@ int main()
 	opB3 = opB1 ^ opB2;
 	std::cout << "A ^ B = " << opB3.toString() << std::endl << std::endl;
 
+	std::cout << "----------------MATRIX 3-----------------------" << std::endl;
+
+	Matrix3 m(2, 5, 8, 6, 9, 7, 4, 10, -20);
+	std::cout << m.toString() << std::endl;
 
 	return 0;
 }
