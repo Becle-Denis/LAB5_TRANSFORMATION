@@ -216,3 +216,25 @@ Matrix3 operator-(Matrix3 const& m1)
 {
 	return Matrix3() - m1;
 }
+
+Matrix3 operator*(float x, Matrix3 const& m1)
+{
+	return Matrix3(
+		m1.a11 * x,
+		m1.a12 * x,
+		m1.a13 * x,
+
+		m1.a21 * x,
+		m1.a22 * x,
+		m1.a23* x,
+
+		m1.a31 * x,
+		m1.a32 * x,
+		m1.a33 * x
+	);
+}
+
+Matrix3 operator*(Matrix3 const& m1, float x)
+{
+	return x * m1;
+}

@@ -92,11 +92,12 @@ public:
 	//product of a matrix by a scalar
 	friend Matrix3 operator* (float x, Matrix3 const & m1);
 
+	// Product of a matrix by a scalar
+	friend Matrix3 operator* (Matrix3 const& m1, float x);
+
 	//Product of 2 matrix
 	friend Matrix3 operator* (Matrix3 const & m1, Matrix3 const & m2);
 
-	//Product of a matrix by a scalar
-	friend Vector3 operator* (Matrix3 const& m1, float x);
 
 	//Product of a matrix by a vector
 	friend Vector3 operator* (Matrix3 const& m1, Vector3 const& v1);

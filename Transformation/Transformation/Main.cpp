@@ -177,6 +177,13 @@ int main()
 	m3 =  - m1 ;
 	std::cout << "- A = " << m3.toString() << std::endl << std::endl;
 
+	//  * float
+	std::cout << "----- A * float ----" << std::endl;
+	m1 = Matrix3(5, 3, 8, 3, 4, -6, 1, 5, 8);
+	std::cout << "A = " << m1.toString() << std::endl;
+	m3 = m1 * 3.5;
+	std::cout << "A * 3.5 = " << m3.toString() << std::endl << std::endl;
+
 
 
 
