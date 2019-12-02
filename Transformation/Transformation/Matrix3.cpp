@@ -65,3 +65,30 @@ Vector3 Matrix3::column(int i)
 		return Vector3(a13, a23, a33);
 	}
 }
+
+Matrix3 Matrix3::inverse(Matrix3 m1)
+{
+	double det = determinant(m1);
+	if (det == 0)
+	{
+		return Matrix3();
+	}
+	else
+	{
+		double scale = 1 / det;
+		Matrix3 answer;
+		answer.a11 = scale * (m1.a22 * m1.a33 - m1.a23 * m1.a32);
+		answer.a12 = scale * (m1.a13 * m1.a32 - m1.a12 * m1.a33);
+		answer.a13 = scale * (m1.a12 * m1.a23 - m1.a13 * m1.a22);
+
+		answer.a21 = scale * (m1.a23 * m1.a31 - m1.a21 * m1.a33);
+		answer.a22 = scale * (m1.a11 * m1.a33 - m1.a13 * m1.a31);
+		answer.a23 = scale * (m1.a13 * m1.a21 - m1.a11 * m1.a23);
+
+		answer.a31 = scale * (m1.a21 * m1.a32 - m1.a22 * m1.a31);
+		answer.a32 = scale * (m1.a12 * m1.a31 - m1.a11 * m1.a32);
+		answer.a33 = scale * (m1.a11 * m1.a22 - m1.a12 * m1.a21);
+
+		return answer;
+	}
+}

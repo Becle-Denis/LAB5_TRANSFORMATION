@@ -128,7 +128,9 @@ int main()
 	std::cout << "Determinant :";
 	std::cout << "\t" << std::to_string(Matrix3::determinant(m)) << std::endl << std::endl;
 	std::cout << "Transposed :"; 
-	std::cout << "\t" << Matrix3::transpose(m).toString() << std::endl;
+	std::cout << "\t" << Matrix3::transpose(m).toString() << std::endl << std::endl;
+	std::cout << "Inverse :";
+	std::cout << "\t" << Matrix3::inverse(m).toString() << std::endl << std::endl;
 
 
 	return 0;
