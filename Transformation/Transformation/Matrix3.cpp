@@ -168,4 +168,14 @@ Matrix3 Matrix3::rotationZ(int angleDEG)
 	return answer;
 }
 
+Matrix3 Matrix3::scale3D(int dx)
+{
+	Matrix3 answer;
+	answer.a11 = (float)dx / 100;
+	answer.a22 = (float)dx / 100;
+	answer.a33 = (float)dx / 100;
+
+	return answer;
+}
+
 

@@ -143,6 +143,8 @@ int main()
 	std::cout << "\t" << Matrix3::rotationY(20).toString() << std::endl << std::endl;
 	std::cout << "New Rotation Z 20 :";
 	std::cout << "\t" << Matrix3::rotationZ(20).toString() << std::endl << std::endl;
+	std::cout << "New Scale 3D 7 :";
+	std::cout << "\t" << Matrix3::scale3D(7).toString() << std::endl << std::endl;
 
 
 	return 0;
