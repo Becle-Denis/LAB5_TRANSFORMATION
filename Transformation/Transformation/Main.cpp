@@ -184,6 +184,16 @@ int main()
 	m3 = m1 * 3.5;
 	std::cout << "A * 3.5 = " << m3.toString() << std::endl << std::endl;
 
+	//  Vector * Matrix
+	std::cout << "----- A(Vector3) * B(Matrix3) ----" << std::endl;
+	Vector3 ans;
+	Vector3 vm1 = Vector3(-4, 2, 6);
+	m2 = Matrix3(5, 3, 8, 3, 4, -6, 1, 5, 8);
+	std::cout << "A = " << vm1.toString() << std::endl;
+	std::cout << "B = " << m2.toString() << std::endl;
+	ans = vm1 * m2;
+	std::cout << "A * B = " << ans.toString() << std::endl << std::endl;
+
 
 
 

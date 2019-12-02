@@ -238,3 +238,22 @@ Matrix3 operator*(Matrix3 const& m1, float x)
 {
 	return x * m1;
 }
+
+Matrix3 operator*(Matrix3 const& m1, Matrix3 const& m2)
+{
+	return Matrix3();
+}
+
+Vector3 operator*(Matrix3 const& m1, Vector3 const& v1)
+{
+	return Vector3(m1.a11 * v1.x + m1.a12 * v1.y + m1.a13 * v1.z,
+		m1.a21 * v1.x + m1.a22 * v1.y + m1.a23 * v1.z,
+		m1.a31 * v1.x + m1.a32 * v1.y + m1.a33 * v1.z);
+}
+
+Vector3 operator*(Vector3 const& v1, Matrix3 const& m1)
+{
+	return Vector3(m1.a11 * v1.x + m1.a21 * v1.y + m1.a31 * v1.z,
+		m1.a12 * v1.x + m1.a22 * v1.y + m1.a32 * v1.z,
+		m1.a13 * v1.x + m1.a23 * v1.y + m1.a33 * v1.z);
+}
