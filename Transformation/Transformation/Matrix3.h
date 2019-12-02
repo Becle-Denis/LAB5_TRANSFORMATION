@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <cmath>
 
 class Vector3;  //further declaration
 
@@ -98,6 +99,10 @@ public:
 	friend Matrix3 operator* (Matrix3 const & m1, Matrix3 const & m2);
 
 	friend Matrix3 operator- (Matrix3 const & m1);
+
+private:
+
+	static float PI;
 };
 
 

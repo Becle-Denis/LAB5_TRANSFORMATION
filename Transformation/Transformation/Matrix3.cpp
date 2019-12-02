@@ -1,5 +1,7 @@
 #include "Matrix3.h"
 
+float Matrix3::PI = 3.141592653589793;
+
 Matrix3::Matrix3(Vector3 row1, Vector3 row2, Vector3 row3) : 
 	a11(row1.x), a12(row1.y), a13(row1.z),
 	a21(row2.x), a22(row2.y), a23(row2.z),
@@ -75,7 +77,7 @@ Matrix3 Matrix3::inverse(Matrix3 m1)
 	}
 	else
 	{
-		double scale = 1 / det;
+		float scale = 1 / det;
 		Matrix3 answer;
 		answer.a11 = scale * (m1.a22 * m1.a33 - m1.a23 * m1.a32);
 		answer.a12 = scale * (m1.a13 * m1.a32 - m1.a12 * m1.a33);
@@ -91,4 +93,28 @@ Matrix3 Matrix3::inverse(Matrix3 m1)
 
 		return answer;
 	}
+}
+
+Matrix3 Matrix3::rotation(int angleDEG)
+{
+	float radians = PI / 180 * angleDEG;
+	Matrix3 answer;
+	answer.a11 = cos(radians);
+	answer.a12 = sin(radians);
+	answer.a21 = -sin(radians);
+	answer.a22 = cos(radians);
+
+	return answer;
+}
+
+Matrix3 Matrix3::translate(int dx, int dy)
+{
+	Matrix3 answer;
+	answer.a11 = 1;
+	answer.a22 = 1;
+	answer.a31 = dx;
+	answer.a32 = dy;
+	answer.a33 = 1;
+
+	return answer;
 }
