@@ -128,3 +128,44 @@ Matrix3 Matrix3::scale(int dx, int dy)
 
 	return answer;
 }
+
+Matrix3 Matrix3::rotationX(int angleDEG)
+{
+	float radians = PI / 180 * angleDEG;
+	Matrix3 answer;
+	answer.a11 = 1;
+	answer.a22 = cos(radians);
+	answer.a23 = -sin(radians);
+	answer.a32 = sin(radians);
+	answer.a33 = cos(radians);
+
+	return answer;
+}
+
+Matrix3 Matrix3::rotationY(int angleDEG)
+{
+	float radians = PI / 180 * angleDEG;
+	Matrix3 answer;
+	answer.a11 = cos(radians);
+	answer.a13 = sin(radians);
+	answer.a22 = 1;
+	answer.a31 = -sin(radians);
+	answer.a33 = cos(radians);
+
+	return answer;
+}
+
+Matrix3 Matrix3::rotationZ(int angleDEG)
+{
+	float radians = PI / 180 * angleDEG;
+	Matrix3 answer;
+	answer.a11 = cos(radians);
+	answer.a12 = -sin(radians);
+	answer.a21 = sin(radians);
+	answer.a22 = cos(radians);
+	answer.a33 = 1;
+
+	return answer;
+}
+
+
