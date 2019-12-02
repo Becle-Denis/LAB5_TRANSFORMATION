@@ -40,7 +40,7 @@ float Matrix3::determinant(Matrix3 m1)
 		- m1.a21 * m1.a12 * m1.a33;
 }
 
-Vector3 Matrix3::row(int i)
+Vector3 Matrix3::row(int i) const
 {
 	switch(i)
 	{
@@ -54,7 +54,7 @@ Vector3 Matrix3::row(int i)
 	}
 }
 
-Vector3 Matrix3::column(int i)
+Vector3 Matrix3::column(int i) const
 {
 	switch (i)
 	{
@@ -241,7 +241,19 @@ Matrix3 operator*(Matrix3 const& m1, float x)
 
 Matrix3 operator*(Matrix3 const& m1, Matrix3 const& m2)
 {
-	return Matrix3();
+	return Matrix3(
+		m1.a11 * m2.a11,
+		m1.a12 * m2.a12,
+		m1.a13 * m2.a13,
+
+		m1.a21 * m2.a21,
+		m1.a22 * m2.a22,
+		m1.a23 * m2.a23,
+
+		m1.a31 * m2.a31,
+		m1.a32 * m2.a32,
+		m1.a33 * m2.a33
+	);
 }
 
 Vector3 operator*(Matrix3 const& m1, Vector3 const& v1)

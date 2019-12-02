@@ -57,10 +57,10 @@ public:
 	static float determinant(Matrix3 m1);
 
 	//return the selected row as a vector3 
-	Vector3 row(int i);
+	Vector3 row(int i) const;
 
 	// return the selected column as a vector3 
-	Vector3 column(int i);
+	Vector3 column(int i) const;
 
 	//return the inverse of a matrix if exist, 
 	static Matrix3 inverse(Matrix3 m1);
