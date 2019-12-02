@@ -170,6 +170,13 @@ int main()
 	m3 = m1 - m2;
 	std::cout << "A - B = " << m3.toString() << std::endl << std::endl;
 
+	//  - X 
+	std::cout << "-----  - A ----" << std::endl;
+	m1 = Matrix3(5, 3, 8, 3, 4, -6, 1, 5, 8);
+	std::cout << "A = " << m1.toString() << std::endl;
+	m3 =  - m1 ;
+	std::cout << "- A = " << m3.toString() << std::endl << std::endl;
+
 
 
 

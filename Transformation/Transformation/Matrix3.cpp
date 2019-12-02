@@ -211,3 +211,8 @@ Matrix3 operator-(Matrix3 const& m1, Matrix3 const& m2)
 		m1.a33 - m2.a33
 	);
 }
+
+Matrix3 operator-(Matrix3 const& m1)
+{
+	return Matrix3() - m1;
+}
