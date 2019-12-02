@@ -22,3 +22,8 @@ std::string Matrix3::toString()
 		+ "\tRow 2 : " + std::to_string(a21) + "\t, 2 : " + std::to_string(a22) + "\t, 3 : " + std::to_string(a23) + "\n"
 		+ "\tRow 3 : " + std::to_string(a31) + "\t, 2 : " + std::to_string(a32) + "\t, 3 : " + std::to_string(a33) + "\n";
 }
+
+Matrix3 Matrix3::transpose(Matrix3 m1)
+{
+	return Matrix3(m1.a11,m1.a21,m1.a31,m1.a12,m1.a22,m1.a32,m1.a13,m1.a23,m1.a33);
+}
