@@ -27,3 +27,13 @@ Matrix3 Matrix3::transpose(Matrix3 m1)
 {
 	return Matrix3(m1.a11,m1.a21,m1.a31,m1.a12,m1.a22,m1.a32,m1.a13,m1.a23,m1.a33);
 }
+
+float Matrix3::determinant(Matrix3 m1)
+{
+	return m1.a11 * m1.a22 * m1.a33 
+		- m1.a11 * m1.a32 * m1.a23 
+		+ m1.a21 * m1.a32 * m1.a13 
+		- m1.a31 * m1.a22 * m1.a13 
+		+ m1.a31 * m1.a12 * m1.a23 
+		- m1.a21 * m1.a12 * m1.a33;
+}

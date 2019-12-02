@@ -124,10 +124,12 @@ int main()
 	std::cout << "----------------MATRIX 3-----------------------" << std::endl;
 
 	Matrix3 m(2, 5, 8, 6, 9, 7, 4, 10, -20);
-	std::cout << "Transpose : ";
-	std::cout  << m.toString();
-	std::cout << "-->> Result : ";
+	std::cout << m.toString() << std::endl;
+	std::cout << "Determinant :";
+	std::cout << "\t" << std::to_string(Matrix3::determinant(m)) << std::endl << std::endl;
+	std::cout << "Transposed :"; 
 	std::cout << "\t" << Matrix3::transpose(m).toString() << std::endl;
+
 
 	return 0;
 }
