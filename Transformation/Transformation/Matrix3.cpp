@@ -37,3 +37,31 @@ float Matrix3::determinant(Matrix3 m1)
 		+ m1.a31 * m1.a12 * m1.a23 
 		- m1.a21 * m1.a12 * m1.a33;
 }
+
+Vector3 Matrix3::row(int i)
+{
+	switch(i)
+	{
+		case 0:
+			return Vector3(a11, a12, a13);
+		case 1:
+			return Vector3(a21, a22, a23);
+		case 2:
+		default:
+			return Vector3(a31, a32, a33);
+	}
+}
+
+Vector3 Matrix3::column(int i)
+{
+	switch (i)
+	{
+	case 0:
+		return Vector3(a11, a21, a31);
+	case 1:
+		return Vector3(a12, a22, a32);
+	case 2:
+	default:
+		return Vector3(a13, a23, a33);
+	}
+}
