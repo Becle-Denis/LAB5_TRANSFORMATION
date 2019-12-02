@@ -80,11 +80,6 @@ public:
 	static Matrix3 scale3D(int dx);
 
 	//OPERATOR
-	//Product of a matrix by a vector
-	friend Vector3 operator* (Matrix3 const & m1, Vector3 const & v1);
-
-	//Product of a vector by a matrix
-	friend Vector3 operator*  (Vector3 const & v1, Matrix3 const & m1);
 
 	//sum 2 matrix
 	friend Matrix3 operator+ (Matrix3 const & m1, Matrix3 const & m2);
@@ -92,13 +87,24 @@ public:
 	//difference of 2 matrix
 	friend Matrix3 operator- (Matrix3 const & m1, Matrix3 const & m2);
 
+	friend Matrix3 operator- (Matrix3 const& m1);
+
 	//product of a matrix by a scalar
 	friend Matrix3 operator* (float x, Matrix3 const & m1);
 
 	//Product of 2 matrix
 	friend Matrix3 operator* (Matrix3 const & m1, Matrix3 const & m2);
 
-	friend Matrix3 operator- (Matrix3 const & m1);
+	//Product of a matrix by a scalar
+	friend Vector3 operator* (Matrix3 const& m1, float x);
+
+	//Product of a matrix by a vector
+	friend Vector3 operator* (Matrix3 const& m1, Vector3 const& v1);
+
+	//Product of a vector by a matrix
+	friend Vector3 operator*  (Vector3 const& v1, Matrix3 const& m1);
+
+	
 
 private:
 

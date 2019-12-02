@@ -146,6 +146,22 @@ int main()
 	std::cout << "New Scale 3D 7 :";
 	std::cout << "\t" << Matrix3::scale3D(7).toString() << std::endl << std::endl;
 
+	std::cout << "----------------MATRIX 3 OPERATIONS-----------------------" << std::endl;
+	Matrix3 m1;
+	Matrix3 m2;
+	Matrix3 m3;
+
+	//Matrix 3
+	//  + 
+	std::cout << "----- A + B ----" << std::endl;
+	m1 = Matrix3(5, 3, 8, 3, 4, -6, 1, 5, 8);
+	m2 = Matrix3(-4, 2, 6, 12, 3, 0, 2, 4, 2);
+	std::cout << "A = " << m1.toString() << std::endl;
+	std::cout << "B = " << m2.toString() << std::endl;
+	m3 = m1 + m2;
+	std::cout << "A + B = " << m3.toString() << std::endl << std::endl;
+
+
 
 	return 0;
 }
