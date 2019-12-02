@@ -118,3 +118,13 @@ Matrix3 Matrix3::translate(int dx, int dy)
 
 	return answer;
 }
+
+Matrix3 Matrix3::scale(int dx, int dy)
+{
+	Matrix3 answer;
+	answer.a11 = ((float)dx) / 100;
+	answer.a22 = ((float)dy) / 100;
+	answer.a33 = 1;
+
+	return answer;
+}

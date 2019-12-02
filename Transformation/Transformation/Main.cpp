@@ -135,6 +135,8 @@ int main()
 	std::cout << "\t" << Matrix3::rotation(60).toString() << std::endl << std::endl;
 	std::cout << "New Translate 10 20 :";
 	std::cout << "\t" << Matrix3::translate(10,20).toString() << std::endl << std::endl;
+	std::cout << "New Scale 5 -3 :";
+	std::cout << "\t" << Matrix3::scale(5, -3).toString() << std::endl << std::endl;
 
 
 	return 0;
