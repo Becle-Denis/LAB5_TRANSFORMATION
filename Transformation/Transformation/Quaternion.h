@@ -20,5 +20,7 @@ public:
 	float modulus() const;
 
 	Quaternion normalise() const;
+
+	Quaternion conjugate() const;
 };
 

@@ -34,6 +34,11 @@ Quaternion Quaternion::normalise() const
 	}
 }
 
+Quaternion Quaternion::conjugate() const
+{
+	return Quaternion(w, -x, -y, -z);
+}
+
 
 
 
