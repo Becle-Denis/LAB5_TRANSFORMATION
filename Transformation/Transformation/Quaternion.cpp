@@ -66,6 +66,11 @@ Quaternion Quaternion::multiply(Quaternion q) const
 	return Quaternion(nw, nx, ny, nz);
 }
 
+Quaternion Quaternion::copy() const
+{
+	return Quaternion(x,y,z,w);
+}
+
 
 
 
