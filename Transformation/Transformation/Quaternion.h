@@ -24,5 +24,7 @@ public:
 	Quaternion conjugate() const;
 
 	void fromAxisAngle(Vector3 axis, float angleRadians);
+
+	Quaternion multiply(Quaternion q) const;
 };
 

@@ -57,6 +57,15 @@ void Quaternion::fromAxisAngle(Vector3 axis, float angleRadians)
 	}
 }
 
+Quaternion Quaternion::multiply(Quaternion q) const
+{
+	float nw = q.w * w - q.x * x - q.y * y - q.z * z;
+	float nx = q.w * x + q.x * w + q.y * z - q.z * y;
+	float ny = q.w * y + q.y * w + q.z * x - q.x * z;
+	float nz = q.w * z + q.z * w + q.x * y - q.y * x;
+	return Quaternion(nw, nx, ny, nz);
+}
+
 
 
 
