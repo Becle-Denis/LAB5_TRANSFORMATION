@@ -201,22 +201,31 @@ int main()
 	Vector3 v1(0, 2, -5);
 	Vector3 v2(-2, -2, -5);
 	Vector3 v3(2, -2, -5);
+	Vector3 result;
+
+	Quaternion q;
 
 	std::cout << "--------------------------------- Class Test ------------------------------------------------" << std::endl;
 	std::cout << "--------------------------------- v1 ------------------------------------------------" << std::endl;
-	std::cout << "V1 : " << v1.toString() << std::endl;
-	std::cout << "Length : " << std::to_string(v1.length()) << std::endl;
+	std::cout << "V1 : " << v1.toString() << std::endl; 
+	std::cout << "Length : " << std::to_string(v1.length()) << std::endl; //lenght v1
 
 	std::cout << "--------------------------------- v2 ------------------------------------------------" << std::endl;
 	std::cout << "V2 : " <<v2.toString() << std::endl;
-	std::cout << "Length Squared : " << std::to_string(v1.length()) << std::endl;
+	std::cout << "Length Squared : " << std::to_string(v2.lenghtSquared()) << std::endl; //lenght Squared v2
 
+	std::cout << "--------------------------------- v3 ------------------------------------------------" << std::endl;
+	std::cout << "V3 : " << v3.toString() << std::endl;
+	result = Matrix3::rotationZ(33.21) * v3;
+	std::cout << "Matrix Rotated z 33.21 Degrees :\t " << result.toString() << std::endl;
+	result = q.rotate(v3, 5);
+	std::cout << "Quaternion rotated 5 Degrees :\t\t" << result.toString() << std::endl;
 
 	//lenght v1
 	//lenght Squared v2
 
 	//(Matrix Rotated ?) Vector 3 rotation z axis 33.21 axis 
 	//(Quaternion rotated) Vector 3 rotation z axis 5 degree 
-
+	system("PAUSE");
 	return 0;
 }
