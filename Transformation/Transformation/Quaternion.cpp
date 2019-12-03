@@ -91,3 +91,9 @@ Quaternion operator*(Quaternion const& q1, Quaternion const& q2)
 	float nz = q1.w * q2.z + q1.z * q2.w + q1.x * q2.y - q1.y * q2.x;
 	return Quaternion(nw, nx, ny, nz);
 }
+
+Quaternion operator+(Quaternion const& q1, Quaternion const& q2)
+{
+	return Quaternion(q1.w + q2.w, q1.x + q2.x, q1.y + q2.y, q1.z + q2.z);
+}
+

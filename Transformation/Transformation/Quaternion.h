@@ -9,12 +9,15 @@ private:
 	float w{ 0 };
 
 public:
+	//CONSTRUCTORS 
 	Quaternion() = default;
 
 	Quaternion(float x1, float y1, float z1, float w1);
 
 	Quaternion(float w1, Vector3 v);
 
+
+	//FUNCTIONS 
 	std::string toString() const;
 
 	float modulus() const;
@@ -31,6 +34,10 @@ public:
 
 	Vector3 rotate(Vector3 pt, int angle) const;
 
+
+	//OPERATORS 
 	friend Quaternion operator * (Quaternion const& q1, Quaternion const& q2);
+
+	friend Quaternion operator + (Quaternion const& q1, Quaternion const& q2);
 };
 
