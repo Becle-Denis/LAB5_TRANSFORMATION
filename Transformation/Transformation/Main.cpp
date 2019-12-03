@@ -3,10 +3,12 @@
 #include "Matrix3.h"
 #include "Vector3.h"
 #include "Vector2.h"
+#include "Quaternion.h"
 
 
 int main()
 {
+	
 	Vector2 testV2(3,4);
 	Vector3 testV3(3,4,5);
 	std::cout << "----------------VECTOR 2 -----------------------" << std::endl;
@@ -193,9 +195,28 @@ int main()
 	std::cout << "B = " << m2.toString() << std::endl;
 	ans = vm1 * m2;
 	std::cout << "A * B = " << ans.toString() << std::endl << std::endl;
+	
+
+	//-----CLASS TEST-------
+	Vector3 v1(0, 2, -5);
+	Vector3 v2(-2, -2, -5);
+	Vector3 v3(2, -2, -5);
+
+	std::cout << "--------------------------------- Class Test ------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------- v1 ------------------------------------------------" << std::endl;
+	std::cout << "V1 : " << v1.toString() << std::endl;
+	std::cout << "Length : " << std::to_string(v1.length()) << std::endl;
+
+	std::cout << "--------------------------------- v2 ------------------------------------------------" << std::endl;
+	std::cout << "V2 : " <<v2.toString() << std::endl;
+	std::cout << "Length Squared : " << std::to_string(v1.length()) << std::endl;
 
 
+	//lenght v1
+	//lenght Squared v2
 
+	//(Matrix Rotated ?) Vector 3 rotation z axis 33.21 axis 
+	//(Quaternion rotated) Vector 3 rotation z axis 5 degree 
 
 	return 0;
 }
