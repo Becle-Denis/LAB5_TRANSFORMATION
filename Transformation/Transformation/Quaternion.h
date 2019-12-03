@@ -39,5 +39,9 @@ public:
 	friend Quaternion operator * (Quaternion const& q1, Quaternion const& q2);
 
 	friend Quaternion operator + (Quaternion const& q1, Quaternion const& q2);
+
+	friend Quaternion operator - (Quaternion const& q1);
+
+	friend Quaternion operator - (Quaternion const& q1, Quaternion const& q2);
 };
 

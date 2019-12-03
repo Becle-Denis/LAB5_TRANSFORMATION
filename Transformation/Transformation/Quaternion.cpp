@@ -97,3 +97,13 @@ Quaternion operator+(Quaternion const& q1, Quaternion const& q2)
 	return Quaternion(q1.w + q2.w, q1.x + q2.x, q1.y + q2.y, q1.z + q2.z);
 }
 
+Quaternion operator-(Quaternion const& q1)
+{
+	return Quaternion(-q1.w, -q1.x, -q1.y, -q1.z);
+}
+
+Quaternion operator-(Quaternion const& q1, Quaternion const& q2)
+{
+	return Quaternion(q1.w - q2.w, q1.x - q2.x, q1.y - q2.y, q1.z - q2.z);
+}
+
