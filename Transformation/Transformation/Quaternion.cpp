@@ -14,3 +14,8 @@ std::string Quaternion::toString()
 {
 	return "Quaternion : x : " + std::to_string(x) + " , y : " + std::to_string(y) + " , z : " + std::to_string(z) + " , w : " + std::to_string(w);
 }
+
+float Quaternion::modulus()
+{
+	return sqrt(w * w + x * x + y * y + z * z);
+}

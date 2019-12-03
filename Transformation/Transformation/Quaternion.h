@@ -16,5 +16,8 @@ public:
 	Quaternion(float w1, Vector3 v);
 
 	std::string toString();
+
+	float modulus();
+
 };
 
