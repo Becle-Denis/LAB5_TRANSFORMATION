@@ -14,5 +14,7 @@ public:
 	Quaternion(float x1, float y1, float z1, float w1);
 
 	Quaternion(float w1, Vector3 v);
+
+	std::string toString();
 };
 

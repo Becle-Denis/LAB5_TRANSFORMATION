@@ -9,3 +9,8 @@ Quaternion::Quaternion(float w1, Vector3 v)
 	: w(w1),x(v.x), y(v.y), z(v.z)
 {
 }
+
+std::string Quaternion::toString()
+{
+	return "Quaternion : x : " + std::to_string(x) + " , y : " + std::to_string(y) + " , z : " + std::to_string(z) + " , w : " + std::to_string(w);
+}
