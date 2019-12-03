@@ -39,6 +39,24 @@ Quaternion Quaternion::conjugate() const
 	return Quaternion(w, -x, -y, -z);
 }
 
+void Quaternion::fromAxisAngle(Vector3 axis, float angleRadians)
+{
+	float m = axis.length();
+	if (m > 0.0001)
+	{
+		double ca = cos(angleRadians / 2);
+		double sa = sin(angleRadians / 2);
+		x = axis.x / m * sa;
+		y = axis.y / m * sa;
+		z = axis.z / m * sa;
+		w = ca;
+	}
+	else
+	{
+		w = 1; x = 0; y = 0; z = 0;
+	}
+}
+
 
 
 
