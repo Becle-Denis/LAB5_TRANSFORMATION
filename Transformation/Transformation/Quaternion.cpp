@@ -10,12 +10,30 @@ Quaternion::Quaternion(float w1, Vector3 v)
 {
 }
 
-std::string Quaternion::toString()
+std::string Quaternion::toString() const
 {
 	return "Quaternion : x : " + std::to_string(x) + " , y : " + std::to_string(y) + " , z : " + std::to_string(z) + " , w : " + std::to_string(w);
 }
 
-float Quaternion::modulus()
+float Quaternion::modulus() const
 {
 	return sqrt(w * w + x * x + y * y + z * z);
 }
+
+Quaternion Quaternion::normalise() const
+{
+	float m = w * w + x * x + y * y + z * z;
+	if (m > 0.001)
+	{
+		m = sqrt(m);
+		return Quaternion(w / m, x / m, y / m, z / m);
+	}
+	else
+	{
+		return Quaternion(1, 0, 0, 0);
+	}
+}
+
+
+
+

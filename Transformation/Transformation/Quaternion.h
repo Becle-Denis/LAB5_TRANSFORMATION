@@ -15,9 +15,10 @@ public:
 
 	Quaternion(float w1, Vector3 v);
 
-	std::string toString();
+	std::string toString() const;
 
-	float modulus();
+	float modulus() const;
 
+	Quaternion normalise() const;
 };
 
