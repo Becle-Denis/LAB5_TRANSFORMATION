@@ -28,5 +28,9 @@ public:
 	Quaternion multiply(Quaternion q) const;
 
 	Quaternion copy() const;
+
+	Vector3 rotate(Vector3 pt, int angle) const;
+
+	friend Quaternion operator * (Quaternion const& q1, Quaternion const& q2);
 };
 

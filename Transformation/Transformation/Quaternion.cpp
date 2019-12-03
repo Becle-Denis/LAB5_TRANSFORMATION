@@ -71,6 +71,23 @@ Quaternion Quaternion::copy() const
 	return Quaternion(x,y,z,w);
 }
 
+Vector3 Quaternion::rotate(Vector3 pt, int angle) const
+{
+	Quaternion axis, rotate;
+	axis = normalise();
+	double angleRad = 3.141592653589793 / 180 * angle;
+	rotate = Quaternion(cos(angleRad / 2), sin(angleRad / 2) * axis.x, sin(angleRad / 2) * axis.y, sin(angleRad / 2) * axis.z);
+	Quaternion conjugate = rotate.conjugate();
+	Quaternion qNode = Quaternion(0, pt.x, pt.y, pt.z);
+	qNode = rotate * qNode * conjugate;
+	return Vector3(qNode.x, qNode.y, qNode.z);
+}
 
-
-
+Quaternion operator*(Quaternion const& q1, Quaternion const& q2)
+{
+	float nw = q1.w * q2.w - q1.x * q2.x - q1.y * q2.y - q1.z * q2.z;
+	float nx = q1.w * q2.x + q1.x * q2.w + q1.y * q2.z - q1.z * q2.y;
+	float ny = q1.w * q2.y + q1.y * q2.w + q1.z * q2.x - q1.x * q2.z;
+	float nz = q1.w * q2.z + q1.z * q2.w + q1.x * q2.y - q1.y * q2.x;
+	return Quaternion(nw, nx, ny, nz);
+}
