@@ -1,59 +1,63 @@
 #pragma once
 #include <string>
 
-class Vector3; // further decalaration
-
-class Vector2
+namespace db
 {
-public: //Attributes 
+	class Vector3; // further decalaration
 
-	float x{ 0.0 };
-	float y{ 0.0 };
+	class Vector2
+	{
+	public: //Attributes 
 
-public: //functions 
+		float x{ 0.0 };
+		float y{ 0.0 };
 
-	//CONSTRUCTORS
-	// empty constructor 
-	Vector2() = default;
+	public: //functions 
 
-	// constructor with 3 values 
-	Vector2(float x1, float y1);
+		//CONSTRUCTORS
+		// empty constructor 
+		Vector2() = default;
 
-	// copy connstructor
-	Vector2(Vector2 const&);
+		// constructor with 3 values 
+		Vector2(float x1, float y1);
 
-	// Constructor with vector 3
-	Vector2(Vector3 const&);
+		// copy connstructor
+		Vector2(Vector2 const&);
 
-	//OTHER
-	float length() const;
+		// Constructor with vector 3
+		Vector2(Vector3 const&);
 
-	float lenghtSquared() const;
+		//OTHER
+		float length() const;
 
-	//Reduce the length to 1
-	void normalise();
+		float lenghtSquared() const;
 
-	std::string toString();
+		//Reduce the length to 1
+		void normalise();
 
-	//OPERATOR
-	//sum of 2 vectors
-	friend Vector2 operator+(Vector2 const& v1, Vector2 const& v2);
+		std::string toString();
 
-	//diference of 2 vectors
-	friend Vector2 operator-(Vector2 const& v1, Vector2 const& c2);
+		//OPERATOR
+		//sum of 2 vectors
+		friend Vector2 operator+(Vector2 const& v1, Vector2 const& v2);
 
-	//negative of vectors
-	friend Vector2 operator-(Vector2 const& v1);
+		//diference of 2 vectors
+		friend Vector2 operator-(Vector2 const& v1, Vector2 const& c2);
 
-	//scalar product of 2 vectors
-	friend Vector2 operator*(Vector2 const& v1, Vector2 const& v2);
+		//negative of vectors
+		friend Vector2 operator-(Vector2 const& v1);
 
-	//product of a scalar by a vector
-	friend Vector2 operator*(float k, Vector2 const& v1);
+		//scalar product of 2 vectors
+		friend Vector2 operator*(Vector2 const& v1, Vector2 const& v2);
 
-	//Product of a scalat by a vector
-	friend Vector2 operator*(int k, Vector2 const& v1);
-};
+		//product of a scalar by a vector
+		friend Vector2 operator*(float k, Vector2 const& v1);
+
+		//Product of a scalat by a vector
+		friend Vector2 operator*(int k, Vector2 const& v1);
+	};
+
+}
 
 #include "Vector3.h"
 

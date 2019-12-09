@@ -5,6 +5,7 @@
 #include "Vector2.h"
 #include "Quaternion.h"
 
+using namespace db;
 
 int main()
 {
